@@ -1,0 +1,52 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/RectangleArena.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.14804233127966765 0.15408813900244633 0.9769034310350455 1.5541571566169017
+  position -0.07713535841457224 -1.8307994571070758 0.5495598719982075
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  translation 0 0 -0.31
+}
+Robot {
+  translation 3.570579354637624e-18 -7.090905796603347e-18 -0.2603924012071412
+  rotation 0.7098473212329519 0.17746183030821927 0.6816333907035799 4.804702405194215e-17
+  children [
+    DistanceSensor {
+      children [
+        DistanceSensor {
+          translation 1.8330146334247465e-17 7.6148693626876e-18 -3.824832593979366e-07
+          rotation 0.14197841457696384 0.2366306909613238 0.961170144089681 1.801649818643682e-16
+          name "my_distance_sensor"
+          boundingObject Box {
+            size 0.1 0.1 0.1
+          }
+          physics Physics {
+          }
+        }
+      ]
+    }
+    Shape {
+      appearance PBRAppearance {
+      }
+      geometry Box {
+        size 0.19 0.17 0.05
+      }
+    }
+  ]
+  boundingObject Box {
+    size 0.1 0.1 0.1
+  }
+  physics Physics {
+  }
+  controller "my_controller"
+}
